@@ -1,79 +1,219 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
+<title>Ramayana Start Page</title>
+<style type="text/css">
+body {
+    background: white;
+    font-family: ubuntu, ubuntubeta, 'Bitstream Vera Sans', 'DejaVu Sans', Tahoma, sans-serif;
+    font-size: 12px;
+    line-height: 14px;
+    margin: 0 auto;
+}
+button::-moz-focus-inner {
+    /* fix buttons in FF */
+    border: 0;
+    padding: 0;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    /* Remove button margin in webkit */
+    button{
+        margin: 0;
+    }
+}   
+.acchide {
+    text-indent: -999em;
+    display: block;
+}
+.search-box {
+    width: 595px;
+    margin: 0 auto;
+    margin-top: 63px;
+}
+.ubuntu-branding {
+    background: url(http://startramayana.besaba.com/sprite.png) no-repeat;
+    background-position: 0px -251px;
+    background-color: #aea79f;
+    height: 40px;
+    border-radius: 5px 5px 0 0;
+}
+.wrapper {
+    padding: 0;
+    border: 1px solid #eee;
+    border-top: 0;
+    border-radius: 0 0 5px 5px;
+    margin: 0 auto;
+    text-align: center;
+}
+.wrapper h1 {
+    margin: 0;
+    padding: 0;
+}
+.logo a {
+    font-size: 1px;
+    display: block;
+    text-indent: -9999px;
+    background: url(http://startramayana.besaba.com/sprite.png) no-repeat;
+    background-position: -10px -310px;
+    margin: 0;
+    padding: 0;
+    height: 38px;
+    width: 109px;
+    margin-bottom: 15px;
+    position: relative;
+}
+.wrapper input {
+    /* allows styling in webkit */
+    -webkit-appearance: textfield;
+    display: inline-block;
+    vertical-align: top;
+    width: 384px;
+    height: 32px;
+    font-size: 18px;
+    padding-left: 5px;
+    padding-right: 5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #AEA79F;
+}
+.inner {
+    display: inline-block;
+    margin: 65px auto 100px auto;
+}
+.inner form {
+    height: 32px;
+}
+.external-links {
+    text-align: center;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.external-links li {
+    height: 30px;
+    display: inline-block;
+    text-align: left;
+    padding-top: 8px;
+    margin: 0 10px;
+}
+.external-links a {
+    text-decoration: none;
+    color: gray;
+    padding: 10px 0 10px 40px;
+}
+.external-links a::after {
+    content: " ›";
+    font-size: 16px;
+}
+.external-links a:hover {
+    color: #e24912;
+}
+.help-link, 
+.shop-link, 
+.community-link {
+    background: url(http://startramayana.besaba.com/sprite.png) no-repeat;
+}
+.help-link {
+    background-position: -10px -450px;
+}
+.help-link:hover {
+    background-position: -10px -490px;
+}
+.shop-link {
+    background-position: -10px -368px;
+}
+.shop-link:hover {
+    background-position: -10px -410px;
+}
+.community-link {
+    background-position: -10px -528px;
+}
+.community-link:hover {
+    background-position: -10px -568px;
+}
+#sbtn {
+    margin: 0 3px;
+    display: inline-block;
+    vertical-align: top;
+    background-color: #4D90FE;
+    background: #4d90fe; /* Old browsers */
+    background: -moz-linear-gradient(top, #4d90fe 0%, #4787ed 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4d90fe), color-stop(100%,#4787ed)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #4d90fe 0%,#4787ed 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #4d90fe 0%,#4787ed 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #4d90fe 0%,#4787ed 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #4d90fe 0%,#4787ed 100%); /* W3C */
+    border: 1px solid #3079ED;
+    border-radius: 2px;
+    color: #FFFFFF;
+    -moz-user-select: none;
+    cursor: default;
+    font-weight: bold;
+    height: 32px;
+    line-height: 32px;
+    min-width: 54px;
+    padding: 0 8px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+#sspan {
+    background: url(http://startramayana.besaba.com/sprite.png) no-repeat;
+    background-position: -10px -692px;
+    vertical-align: top;
+    display: inline-block;
+    height: 17px;
+    margin: 5px 19px;
+    width: 14px;
+}
+</style>
+</head>
+<body>
+    <div class="search-box">
+        <div class="ubuntu-branding"></div>
+        <div class="wrapper">
+            <div class="inner">
+                <h1 class="logo"><a href="http://www.google.com">Google</a></h1>
+                <form method="get" class="search-form" action="http://www.google.com/search" name="search">
+                    <input type="search" name="q" value="" x-webkit-speech id="sbi" /><!-- eliminate whitespace
+                    --><button id="sbtn" type="submit"><span id="sspan"></span><span class="acchide">Search</span></button>
+                    <input type="hidden" name="ie" value="UTF-8" />
+                    <input type="hidden" name="sa" value="Search" />
+                    <input type="hidden" name="channel" value="fe">
+                    <input type="hidden" name="client" value="browser-ubuntu">
+                    <input title="search" type="hidden" name="hl" value="en" />
+                </form>
+            </div>
+        </div>
+        <ul class="external-links">
+            <li class="help-link"><a href="http://groups.google.com/forum/?fromgroups#!forum/dev-ramayana">Mailing List</a></li>
+            <li class="shop-link"><a href="http://shop.newbieilmu.web.id">Toko Online</a></li>
+            <li class="community-link"><a href="http://www.wiki.newbieilmu.web.id">Wiki</a></li>
+        </ul>
+    </div><!-- close search-box -->
+<script type="text/javascript">
+//<![CDATA[
+(function focus_search() {
+    function search_select(e) {
+        if(e.value.length > 0) {
+            e.select();
+        }
+        e.select();
+    }
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Homepage : " />
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Homepage</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/linux-ramayana/homepage">View on GitHub</a>
-
-          <h1 id="project_title">Homepage</h1>
-          <h2 id="project_tagline"></h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/linux-ramayana/homepage/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/linux-ramayana/homepage/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Homepage maintained by <a href="https://github.com/linux-ramayana">linux-ramayana</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
+    sbi = document.getElementById('sbi');
+    sbi.focus();
+    search_select(sbi);
+})();
+//]]>
+</script>
+</body>
 </html>
